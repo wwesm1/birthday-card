@@ -31,7 +31,7 @@
  text-align:center;
  border-radius:35px;
  backdrop-filter:blur(25px);
- background:rgba(255,255,255,.18);
+ background:rgba(255, 255, 255, 0.18);
  box-shadow:
  0 0 60px rgba(255,255,255,.5),
  inset 0 0 40px rgba(255,255,255,.3);
@@ -43,9 +43,18 @@
 .title{
  font-size:2.5rem;
  color:white;
+ text-shadow:
+    0 0 5px #fff,
+    0 0 10px #ff9ed6,
+    0 0 20px #ff9ed6,
+    0 0 30px #ff9ed6,
+    0 0 40px #8ed2ff,
+    0 0 55px #8ed2ff,
+    0 0 75px #8ed2ff;
  letter-spacing:1px;
  text-shadow:0 0 25px white;
 }
+
 
 .subtitle{
  margin-top:12px;
@@ -78,6 +87,11 @@ button:active{transform:scale(.93);}
  margin-top:45px;
  font-size:1.3rem;
  color:white;
+ text-shadow:
+    0 0 5px #fff,
+    0 0 40px #8ed2ff,
+    0 0 55px #0099ff,
+    0 0 75px #8ed2ff;
  line-height:1.7;
  animation:reveal 1.2s ease;
 }

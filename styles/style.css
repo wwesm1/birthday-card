@@ -44,6 +44,7 @@
 .title {
   font-size: 2.5rem;
   color: white;
+  text-shadow: 0 0 5px #fff, 0 0 10px #ff9ed6, 0 0 20px #ff9ed6, 0 0 30px #ff9ed6, 0 0 40px #8ed2ff, 0 0 55px #8ed2ff, 0 0 75px #8ed2ff;
   letter-spacing: 1px;
   text-shadow: 0 0 25px white;
 }
@@ -63,7 +64,7 @@ button {
   border: none;
   border-radius: 50px;
   color: white;
-  background: linear-gradient(45deg, #fa0092, #8e92ff, #fa0092);
+  background: linear-gradient(45deg, #fa008e, #878bfc, #fa008e);
   background-size: 300%;
   animation: shine 6s linear infinite;
   box-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
@@ -79,6 +80,7 @@ button:active {
   margin-top: 45px;
   font-size: 1.3rem;
   color: white;
+  text-shadow: 0 0 5px #fff, 0 0 40px #8ed2ff, 0 0 55px #0099ff, 0 0 75px #8ed2ff;
   line-height: 1.7;
   animation: reveal 1.2s ease;
 }
