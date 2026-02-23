@@ -1,0 +1,94 @@
+@media (min-width: 768px) {
+  .container {
+    display: none;
+  }
+  .phone-warning {
+    display: block;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 40px;
+  }
+}
+.container {
+  text-align: center;
+  padding: 30px;
+  animation: fadeIn 1.5s ease;
+}
+
+.title {
+  color: #ffffff;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+button {
+  background: linear-gradient(45deg, #ff7eb9, #7ecbff);
+  border: none;
+  padding: 18px 28px;
+  border-radius: 40px;
+  font-size: 1.2rem;
+  color: white;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+  transition: 0.3s;
+  cursor: pointer;
+}
+button:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 30px rgb(255, 255, 255);
+}
+
+.message {
+  margin-top: 35px;
+  font-size: 1.2rem;
+  color: white;
+  line-height: 1.6;
+  animation: pop 1s ease forwards;
+}
+
+.hidden {
+  display: none;
+}
+
+/* animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes pop {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #ffd6ec, #cde7ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* hide everything on large screens */
+.phone-warning {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */
