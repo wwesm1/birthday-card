@@ -1,19 +1,16 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",sans-serif;}
+
+body{
+ height:100vh;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ overflow:hidden;
+ background:radial-gradient(circle at 20% 30%,$bg1,transparent 40%),
+ radial-gradient(circle at 80% 70%,$bg2,transparent 40%),
+ linear-gradient(135deg,#ffd4ec,#c9e7ff);
 }
 
-body {
-  height: 100vh;
-  background: linear-gradient(135deg, $bg1, $bg2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+/* mobile only */
 
-/* hide everything on large screens */
-.phone-warning {
-  display: none;
-}
+.desktop{display:none;}

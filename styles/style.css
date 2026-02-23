@@ -1,49 +1,86 @@
 @media (min-width: 768px) {
-  .container {
+  .card {
     display: none;
   }
-  .phone-warning {
+  .desktop {
     display: block;
-    font-size: 1.5rem;
-    text-align: center;
-    padding: 40px;
+    color: white;
+    font-size: 2rem;
   }
 }
-.container {
+/* stars */
+.stars span {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 3s infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+}
+/* card */
+.card {
+  position: relative;
+  padding: 50px 28px;
   text-align: center;
-  padding: 30px;
-  animation: fadeIn 1.5s ease;
+  border-radius: 35px;
+  backdrop-filter: blur(25px);
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 0 60px rgba(255, 255, 255, 0.5), inset 0 0 40px rgba(255, 255, 255, 0.3);
+  animation: fade 1.5s ease;
 }
 
+/* text */
 .title {
-  color: #ffffff;
-  font-size: 2.2rem;
-  margin-bottom: 40px;
-  text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  font-size: 2.5rem;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow: 0 0 25px white;
 }
 
+.subtitle {
+  margin-top: 12px;
+  color: white;
+  opacity: 0.9;
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+}
+
+/* button */
 button {
-  background: linear-gradient(45deg, #ff7eb9, #7ecbff);
+  padding: 18px 42px;
+  font-size: 1.15rem;
   border: none;
-  padding: 18px 28px;
-  border-radius: 40px;
-  font-size: 1.2rem;
+  border-radius: 50px;
   color: white;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+  background: linear-gradient(45deg, #fa0092, #8e92ff, #fa0092);
+  background-size: 300%;
+  animation: shine 6s linear infinite;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
   transition: 0.3s;
-  cursor: pointer;
-}
-button:active {
-  transform: scale(0.95);
-  box-shadow: 0 0 30px rgb(255, 255, 255);
 }
 
-.message {
-  margin-top: 35px;
-  font-size: 1.2rem;
+button:active {
+  transform: scale(0.93);
+}
+
+/* letter */
+.letter {
+  margin-top: 45px;
+  font-size: 1.3rem;
   color: white;
-  line-height: 1.6;
-  animation: pop 1s ease forwards;
+  line-height: 1.7;
+  animation: reveal 1.2s ease;
 }
 
 .hidden {
@@ -51,24 +88,32 @@ button:active {
 }
 
 /* animations */
-@keyframes fadeIn {
+@keyframes shine {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 300%;
+  }
+}
+@keyframes fade {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-@keyframes pop {
-  0% {
-    transform: scale(0.7);
+@keyframes reveal {
+  from {
     opacity: 0;
+    transform: scale(0.85);
   }
-  100% {
-    transform: scale(1);
+  to {
     opacity: 1;
+    transform: scale(1);
   }
 }
 * {
@@ -80,14 +125,15 @@ button:active {
 
 body {
   height: 100vh;
-  background: linear-gradient(135deg, #ffd6ec, #cde7ff);
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: radial-gradient(circle at 20% 30%, #ff51b9, transparent 40%), radial-gradient(circle at 80% 70%, hsl(235, 100%, 39%), transparent 40%), linear-gradient(135deg, #ffd4ec, #c9e7ff);
 }
 
-/* hide everything on large screens */
-.phone-warning {
+/* mobile only */
+.desktop {
   display: none;
 }
 
